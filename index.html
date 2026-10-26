@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consulta: Agenda de Pesquisa | TJCE, ESMEC e Universidade Christus</title>
+<meta name="description" content="O TJCE, a ESMEC e o PPGD da Universidade Christus vão definir juntos uma Agenda de Pesquisa Prioritária. Participe da consulta.">
+<meta property="og:title" content="Quais problemas da Justiça cearense merecem virar pesquisa?">
+<meta property="og:description" content="Consulta para a Agenda de Pesquisa Prioritária do TJCE, da ESMEC e do PPGD da Universidade Christus.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate: #1f242a;
+    --slate-2: #272d34;
+    --slate-line: rgba(184, 160, 106, .28);
+    --gold: #b8a06a;
+    --gold-soft: #cdb985;
+    --bronze: #7a5f27;
+    --paper: #f6f4ef;
+    --white: #ffffff;
+    --ink: #1f242a;
+    --ink-2: #4f555d;
+    --ink-3: #737981;
+    --line: #e2ddd1;
+    --on-dark: #f3f1ec;
+    --on-dark-2: #b3b8bf;
+    --error: #b42318;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --wrap: 1160px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--white); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 600; line-height: 1.12; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  @media (max-width: 560px) { .wrap { padding: 0 16px; } }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); }
+  .dark .eyebrow { color: var(--gold); }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  /* barra de marcas */
+  .brandbar { background: var(--white); border-bottom: 1px solid var(--line); }
+  .brandbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 84px; }
+  .brandbar .uc { height: 42px; width: auto; }
+  .partners { display: flex; align-items: center; gap: 22px; }
+  .partners .label { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+  .partners .tjce { height: 38px; width: auto; }
+  .partners .esmec { height: 40px; width: auto; }
+  @media (max-width: 760px) { .partners .label { display: none; } }
+  @media (max-width: 560px) {
+    .brandbar .wrap { min-height: 68px; gap: 10px; }
+    .brandbar .uc { height: 30px; }
+    .partners { gap: 12px; padding-left: 12px; border-left: 1px solid var(--line); }
+    .partners .tjce { height: 26px; }
+    .partners .esmec { height: 28px; }
+  }
+
+  /* hero */
+  .dark { background: var(--slate); color: var(--on-dark); }
+  .hero { position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60% 80% at 85% 20%, rgba(184, 160, 106, .10), transparent 60%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px;
+    align-items: center; padding-top: 88px; padding-bottom: 96px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 58px); margin-top: 18px; color: var(--white); }
+  .hero .lead { margin-top: 22px; font-size: 18px; color: var(--on-dark-2); max-width: 56ch; }
+  .rule { display: flex; align-items: center; margin-top: 28px; width: 160px; }
+  .rule::before { content: ""; flex: 1; height: 2px; background: var(--gold); }
+  .rule::after { content: ""; width: 8px; height: 14px; background: var(--gold); }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px;
+    border-radius: 4px; font: 600 15px/1 var(--sans); text-decoration: none; border: 1.5px solid transparent; cursor: pointer;
+    transition: background-color .15s, color .15s, border-color .15s; }
+  .btn-gold { background: var(--gold); color: var(--slate); }
+  .btn-gold:hover { background: var(--gold-soft); }
+  .btn-line { border-color: rgba(243, 241, 236, .45); color: var(--white); }
+  .btn-line:hover { border-color: var(--gold); color: var(--gold-soft); }
+  .hero .meta { margin-top: 16px; font-size: 13px; color: var(--on-dark-2); }
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 48px; padding-top: 56px; padding-bottom: 64px; }
+  }
+  @media (max-width: 560px) {
+    .hero .lead { font-size: 16px; }
+    .ctas .btn { width: 100%; }
+  }
+
+  /* cartão da agenda */
+  .agenda { background: var(--slate-2); border: 1px solid var(--slate-line); border-radius: 6px; padding: 28px 28px 20px; }
+  .agenda .eyebrow { display: block; }
+  .agenda .sub { margin-top: 4px; font-size: 13px; color: var(--on-dark-2); }
+  .agenda ol { list-style: none; margin: 18px 0 0; padding: 0; }
+  .agenda li { display: grid; grid-template-columns: 34px 1fr; align-items: baseline; padding: 11px 0;
+    border-top: 1px solid rgba(243, 241, 236, .08); font-family: var(--serif); font-size: 18px; color: var(--white); }
+  .agenda li span { font: 600 12px/1 var(--sans); letter-spacing: .08em; color: var(--gold); }
+  .agenda li.yours a { justify-self: start; color: var(--gold-soft); text-decoration: none; border-bottom: 1px dashed var(--gold); padding-bottom: 2px; }
+  .agenda li.yours a:hover { color: var(--white); }
+  @media (max-width: 560px) { .agenda { padding: 22px 18px 14px; } .agenda li { font-size: 17px; } }
+
+  /* seções */
+  section { scroll-margin-top: 16px; }
+  .sec { padding: 96px 0; }
+  .sec-paper { background: var(--paper); }
+  .sec h2 { font-size: clamp(28px, 3.6vw, 42px); margin-top: 14px; max-width: 28ch; }
+  .sec .intro { margin-top: 18px; font-size: 17px; color: var(--ink-2); max-width: 64ch; }
+  .dark.sec h2 { color: var(--white); }
+  .dark.sec .intro { color: var(--on-dark-2); }
+  @media (max-width: 560px) { .sec { padding: 64px 0; } .sec .intro { font-size: 16px; } }
+
+  .steps { list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+  .step { position: relative; padding-top: 26px; border-top: 2px solid var(--line); }
+  .step::before { content: ""; position: absolute; top: -2px; left: 0; width: 48px; height: 2px; background: var(--gold); }
+  .step .n { font: 600 30px/1 var(--serif); color: var(--gold); }
+  .step h3 { font-size: 21px; margin-top: 14px; }
+  .step p { margin-top: 10px; font-size: 15px; color: var(--ink-2); }
+  @media (max-width: 1000px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 28px; } }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; gap: 0; margin-top: 36px; }
+    .step { padding: 0 0 28px 24px; border-top: 0; border-left: 2px solid var(--line); }
+    .step:last-child { padding-bottom: 0; }
+    .step::before { top: 0; left: -2px; width: 2px; height: 36px; }
+  }
+
+  .join { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: center; margin-top: 56px;
+    padding: 36px 40px; background: var(--slate); color: var(--on-dark); border-radius: 6px; border-left: 4px solid var(--gold); }
+  .join h3 { font-size: clamp(24px, 2.6vw, 30px); color: var(--white); }
+  .join p { margin-top: 12px; font-size: 16px; color: var(--on-dark-2); max-width: 62ch; }
+  @media (max-width: 860px) { .join { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .join { padding: 26px 20px; margin-top: 44px; } .join .btn { width: 100%; } }
+
+  .foto-assinatura { margin: 44px 0 0; }
+  .foto-assinatura img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; border-radius: 4px; }
+  .foto-assinatura figcaption { margin-top: 10px; font-size: 13px; color: var(--ink-3); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 44px; border-top: 1px solid var(--slate-line); border-bottom: 1px solid var(--slate-line); }
+  .stats div { padding: 26px 20px 24px 0; }
+  .stats div + div { padding-left: 24px; border-left: 1px solid var(--slate-line); }
+  .stats b { display: block; font: 600 36px/1 var(--serif); color: var(--white); }
+  .stats span { display: block; margin-top: 8px; font-size: 14px; color: var(--on-dark-2); }
+  @media (max-width: 760px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stats div:nth-child(3) { padding-left: 0; border-left: 0; }
+    .stats div:nth-child(n+3) { border-top: 1px solid var(--slate-line); }
+    .stats b { font-size: 30px; }
+  }
+  .lines { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .line { border: 1px solid var(--slate-line); border-radius: 4px; padding: 24px; }
+  .line .eyebrow { font-size: 11px; }
+  .line h3 { margin-top: 10px; font-size: 22px; color: var(--white); }
+  .line p { margin-top: 10px; font-size: 15px; color: var(--on-dark-2); }
+  @media (max-width: 760px) { .lines { grid-template-columns: 1fr; } }
+  .more { margin-top: 36px; }
+
+  /* formulário */
+  .consulta .wrap { max-width: 840px; }
+  .card { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 40px; margin-top: 40px;
+    box-shadow: 0 1px 2px rgba(31, 36, 42, .04), 0 12px 32px -18px rgba(31, 36, 42, .18); }
+  @media (max-width: 560px) { .card { padding: 24px 16px; margin-top: 28px; } }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .q + .q { margin-top: 32px; }
+  .q legend, .q > label { display: block; padding: 0; font-weight: 600; font-size: 16px; color: var(--ink); }
+  .q .hint { margin-top: 2px; font-size: 13px; color: var(--ink-3); }
+  .opts { display: grid; gap: 8px; margin-top: 12px; }
+  .opts.two { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 600px) { .opts.two { grid-template-columns: 1fr; } }
+  .opt { position: relative; display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 14px;
+    border: 1px solid var(--line); border-radius: 4px; font-size: 15px; color: var(--ink-2); cursor: pointer;
+    transition: border-color .15s, background-color .15s; }
+  .opt:hover { border-color: #c9c2b2; }
+  .opt input { width: 18px; height: 18px; margin: 0; flex: none; accent-color: var(--slate); cursor: pointer; }
+  .opt:has(input:checked) { border-color: var(--slate); background: var(--paper); color: var(--ink); }
+  .opt:has(input:disabled) { opacity: .5; cursor: not-allowed; }
+  .opt:has(input:focus-visible) { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .input { display: block; width: 100%; min-height: 48px; margin-top: 10px; padding: 12px 14px; border: 1px solid #cfc8b8; border-radius: 4px;
+    background: var(--white); color: var(--ink); font: 400 16px/1.4 var(--sans); }
+  .input::placeholder { color: #9a9fa6; }
+  .input:focus { outline: none; border-color: var(--slate); box-shadow: 0 0 0 3px rgba(184, 160, 106, .35); }
+  select.input { appearance: none; padding-right: 40px; cursor: pointer;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f242a' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 16px center; }
+  textarea.input { min-height: 120px; resize: vertical; }
+  #outroWrap { display: none; }
+  #outroWrap.on { display: block; }
+  .err { display: none; margin-top: 8px; font-size: 13px; font-weight: 500; color: var(--error); }
+  .invalid .err { display: block; }
+  .invalid .input { border-color: var(--error); }
+  .invalid .opts .opt { border-color: #e7b4ae; }
+
+  .optin { margin-top: 40px; border: 1.5px solid var(--gold); border-radius: 6px; background: #fbf9f4; padding: 22px 22px; }
+  .optin-toggle { display: flex; gap: 14px; align-items: flex-start; cursor: pointer; }
+  .optin-toggle input { width: 22px; height: 22px; margin: 1px 0 0; flex: none; accent-color: var(--slate); cursor: pointer; }
+  .optin-toggle b { display: block; font-size: 16px; line-height: 1.4; color: var(--ink); }
+  .optin-toggle .optin-hint { display: block; margin-top: 2px; font-size: 13px; color: var(--ink-3); }
+  .optin-fields { display: none; margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .optin.on .optin-fields { display: block; }
+  .optin-fields .q + .q, .optin-fields .row2 + .q, .optin-fields .q + .row2 { margin-top: 20px; }
+  .optin-fields .q > label { font-size: 14px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .row2 > .q { margin-top: 0 !important; }
+  @media (max-width: 600px) { .row2 { grid-template-columns: 1fr; } }
+  .q > .consent { display: flex; gap: 12px; align-items: flex-start; font-weight: 400; font-size: 14px; color: var(--ink-2); cursor: pointer; }
+  .consent input { width: 18px; height: 18px; margin: 2px 0 0; flex: none; accent-color: var(--slate); cursor: pointer; }
+  .consent a { color: var(--bronze); }
+  @media (max-width: 560px) { .optin { padding: 18px 14px; } }
+
+  .submit { width: 100%; margin-top: 32px; min-height: 56px; background: var(--slate); color: var(--white); font-size: 16px; }
+  .submit:hover { background: #2d343c; }
+  .submit[disabled] { opacity: .6; cursor: progress; }
+  .form-msg { margin-top: 14px; font-size: 14px; color: var(--error); text-align: center; min-height: 1em; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .done { display: none; text-align: center; padding: 16px 0 8px; }
+  .done:focus { outline: none; }
+  .done .check { width: 56px; height: 56px; margin: 0 auto; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--gold);
+    display: grid; place-items: center; }
+  .done h3 { margin-top: 20px; font-size: 28px; }
+  .done p { margin: 12px auto 0; max-width: 46ch; color: var(--ink-2); }
+  .done .opted { display: none; }
+  .card.sent form { display: none; }
+  .card.sent .done { display: block; }
+  .card.sent.with-optin .done .opted { display: block; }
+
+  /* rodapé */
+  .footer { border-top: 1px solid var(--line); background: var(--white); }
+  .footer .logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 28px 48px; padding: 48px 0 40px; }
+  .footer .logos .uc { height: 44px; width: auto; }
+  .footer .logos .tjce { height: 40px; width: auto; }
+  .footer .logos .esmec { height: 42px; width: auto; }
+  .footer .bottom { background: var(--slate); color: var(--on-dark-2); font-size: 13px; }
+  .footer .bottom .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-top: 18px; padding-bottom: 18px; }
+  .footer .bottom nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .footer .bottom a { color: var(--on-dark); text-decoration: none; }
+  .footer .bottom a:hover { color: var(--gold-soft); }
+  @media (max-width: 560px) {
+    .footer .logos { gap: 24px 28px; padding: 36px 0 32px; }
+    .footer .logos .uc { height: 34px; } .footer .logos .tjce { height: 30px; } .footer .logos .esmec { height: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="brandbar">
+  <div class="wrap">
+    <img class="uc" src="assets/universidade-christus-azul.png" alt="Universidade Christus" width="762" height="200">
+    <div class="partners">
+      <span class="label">Em cooperação com</span>
+      <img class="tjce" src="assets/tjce.png" alt="Tribunal de Justiça do Estado do Ceará (TJCE)" width="301" height="98">
+      <img class="esmec" src="assets/esmec.png" alt="Escola Superior da Magistratura do Estado do Ceará (ESMEC)" width="614" height="220">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero dark" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Termo de Cooperação · TJCE, ESMEC e Universidade Christus</p>
+        <h1 id="titulo">Quais problemas da Justiça cearense merecem virar pesquisa?</h1>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="lead">O Tribunal de Justiça do Ceará, a ESMEC e o Programa de Pós-Graduação em Direito da Universidade Christus vão definir juntos uma Agenda de Pesquisa Prioritária. O primeiro passo é ouvir quem vive a jurisdição todos os dias.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#consulta">Responder à consulta</a>
+          <a class="btn btn-line" href="#ppgd">Conhecer o PPGD</a>
+        </div>
+        <p class="meta">Cerca de 3 minutos · participação voluntária</p>
+      </div>
+      <aside class="agenda" aria-label="Agenda de Pesquisa Prioritária">
+        <span class="eyebrow">Agenda de Pesquisa Prioritária</span>
+        <p class="sub">Alguns temas citados no termo</p>
+        <ol>
+          <li><span>01</span>Judicialização da saúde</li>
+          <li><span>02</span>Precedentes</li>
+          <li><span>03</span>Gestão da litigiosidade</li>
+          <li><span>04</span>Racionalidade decisória</li>
+          <li><span>05</span>Meios adequados de solução de conflitos</li>
+          <li><span>06</span>Judicialização de políticas públicas</li>
+          <li class="yours"><span>07</span><a href="#consulta">A sua sugestão</a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec sec-paper" aria-labelledby="t-coop">
+    <div class="wrap">
+      <p class="eyebrow">Como funciona</p>
+      <h2 id="t-coop">Os temas que você indicar viram pesquisa no PPGD</h2>
+      <p class="intro">A cooperação entre o TJCE, a ESMEC e a Universidade Christus leva os problemas do dia a dia do Judiciário para dentro do mestrado e do doutorado em Direito. O caminho é este:</p>
+
+      <!-- Foto da assinatura: salvar em assets/assinatura.jpg e descomentar.
+      <figure class="foto-assinatura">
+        <img src="assets/assinatura.jpg" alt="Assinatura do Termo de Cooperação entre TJCE, ESMEC e Universidade Christus" width="1600" height="700">
+        <figcaption>Assinatura do Termo de Cooperação. Foto: </figcaption>
+      </figure>
+      -->
+
+      <ol class="steps">
+        <li class="step">
+          <span class="n">01</span>
+          <h3>Você aponta os temas</h3>
+          <p>Magistrados e servidores respondem à consulta e dizem quais questões da rotina merecem ser estudadas a fundo.</p>
+        </li>
+        <li class="step">
+          <span class="n">02</span>
+          <h3>Nasce a Agenda de Pesquisa</h3>
+          <p>TJCE, ESMEC e PPGD reúnem as respostas e escolhem juntos os temas prioritários.</p>
+        </li>
+        <li class="step">
+          <span class="n">03</span>
+          <h3>A agenda entra no PPGD</h3>
+          <p>Os temas passam a ser discutidos e pesquisados no programa, em disciplinas, seminários, grupos de pesquisa, dissertações e teses.</p>
+        </li>
+        <li class="step">
+          <span class="n">04</span>
+          <h3>A pesquisa volta para o Tribunal</h3>
+          <p>Os resultados chegam ao TJCE em relatórios e notas técnicas, com recomendações para a prática.</p>
+        </li>
+      </ol>
+
+      <div class="join">
+        <div>
+          <h3>Quem vive o problema também pode pesquisá-lo</h3>
+          <p>Além de indicar os temas, você pode estudá-los. No mestrado ou no doutorado da Universidade Christus, uma questão do seu trabalho vira dissertação ou tese, orientada por doutores e com a possibilidade de pesquisar com dados do próprio TJCE.</p>
+        </div>
+        <a class="btn btn-gold" href="#consulta" data-optin>Responder e me pré-inscrever</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dark" id="ppgd" aria-labelledby="t-ppgd">
+    <div class="wrap">
+      <p class="eyebrow">Quem conduz a pesquisa</p>
+      <h2 id="t-ppgd">Programa de Pós-Graduação em Direito da Universidade Christus</h2>
+      <p class="intro">Mestrado e Doutorado Acadêmicos na área de concentração Direito, Acesso à Justiça e ao Desenvolvimento. O programa foi estruturado para investigar os problemas que aparecem no exercício da jurisdição e na atuação das instituições de justiça.</p>
+
+      <div class="stats">
+        <div><b>24 meses</b><span>Mestrado</span></div>
+        <div><b>42 meses</b><span>Doutorado</span></div>
+        <div><b>13</b><span>docentes doutores</span></div>
+        <div><b>2</b><span>linhas de pesquisa</span></div>
+      </div>
+
+      <div class="lines">
+        <article class="line">
+          <p class="eyebrow">Linha 1</p>
+          <h3>Direito Processual e Acesso à Justiça</h3>
+          <p>Jurisdição constitucional, precedentes, processo democrático e meios adequados de tratamento dos conflitos.</p>
+        </article>
+        <article class="line">
+          <p class="eyebrow">Linha 2</p>
+          <h3>Direito ao Desenvolvimento (Relações Públicas e Privadas)</h3>
+          <p>Desenvolvimento social e socioeconômico e a realização dos direitos fundamentais nas relações públicas e privadas.</p>
+        </article>
+      </div>
+
+      <div class="more">
+        <a class="btn btn-line" href="https://portal.unichristus.edu.br/ppgd" target="_blank" rel="noopener">Ver a página completa do PPGD</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-paper consulta" id="consulta" aria-labelledby="t-consulta">
+    <div class="wrap">
+      <p class="eyebrow">Consulta à magistratura e aos servidores</p>
+      <h2 id="t-consulta">Ajude a definir a Agenda de Pesquisa</h2>
+      <p class="intro">Leva cerca de 3 minutos. As respostas são analisadas em conjunto pela comissão do TJCE, da ESMEC e do PPGD.</p>
+
+      <div class="card" id="card">
+        <!-- Perguntas 1 a 4 são provisórias: trocar pelo questionário oficial da secretaria do PPGD. -->
+        <form id="form" novalidate>
+          <fieldset class="q" id="q-vinculo">
+            <legend>1. Qual é o seu vínculo?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="vinculo" value="Magistrado(a)"> Magistrado(a)</label>
+              <label class="opt"><input type="radio" name="vinculo" value="Servidor(a) do TJCE"> Servidor(a) do TJCE</label>
+              <label class="opt"><input type="radio" name="vinculo" value="Outro profissional do sistema de justiça"> Outro profissional do sistema de justiça</label>
+            </div>
+            <p class="err" role="alert">Escolha uma opção.</p>
+          </fieldset>
+
+          <div class="q" id="q-atuacao">
+            <label for="atuacao">2. Onde você atua?</label>
+            <select class="input" id="atuacao" name="atuacao">
+              <option value="">Selecione</option>
+              <option>1º grau</option>
+              <option>2º grau</option>
+              <option>Área administrativa</option>
+              <option>Outro</option>
+            </select>
+            <p class="err" role="alert">Selecione onde você atua.</p>
+          </div>
+
+          <fieldset class="q" id="q-temas">
+            <legend>3. Quais temas deveriam ser prioridade?</legend>
+            <p class="hint">Escolha até 3.</p>
+            <div class="opts two">
+              <label class="opt"><input type="checkbox" name="temas" value="Judicialização da saúde"> Judicialização da saúde</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Precedentes"> Precedentes</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Gestão da litigiosidade"> Gestão da litigiosidade</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Racionalidade decisória"> Racionalidade decisória</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Meios adequados de solução de conflitos"> Meios adequados de solução de conflitos</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Judicialização de políticas públicas"> Judicialização de políticas públicas</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Acesso à justiça"> Acesso à justiça</label>
+              <label class="opt"><input type="checkbox" name="temas" value="Outro" id="temaOutro"> Outro</label>
+            </div>
+            <div id="outroWrap">
+              <label class="hint" for="outroTexto" style="display:block;margin-top:12px">Qual tema?</label>
+              <input class="input" id="outroTexto" name="outroTexto" type="text" maxlength="120" placeholder="Descreva o tema" style="margin-top:6px">
+            </div>
+            <p class="err" role="alert">Escolha pelo menos um tema.</p>
+          </fieldset>
+
+          <div class="q" id="q-problema">
+            <label for="problema">4. Que problema do seu dia a dia de trabalho você gostaria de ver estudado a fundo?</label>
+            <p class="hint">Opcional</p>
+            <textarea class="input" id="problema" name="problema" maxlength="1500" placeholder="Escreva com as suas palavras"></textarea>
+          </div>
+
+          <div class="optin" id="optin">
+            <label class="optin-toggle">
+              <input type="checkbox" id="optinBox" name="preinscricao" aria-controls="optinFields" aria-expanded="false">
+              <span><b>Quero me pré-inscrever no próximo processo seletivo do PPGD</b><span class="optin-hint">Opcional. Marque para informar seus dados.</span></span>
+            </label>
+            <div class="optin-fields" id="optinFields">
+              <fieldset class="q" id="q-interesse">
+                <legend style="font-size:14px">Tenho interesse em</legend>
+                <div class="opts two">
+                  <label class="opt"><input type="radio" name="interesse" value="Mestrado"> Mestrado</label>
+                  <label class="opt"><input type="radio" name="interesse" value="Doutorado"> Doutorado</label>
+                </div>
+                <p class="err" role="alert">Escolha mestrado ou doutorado.</p>
+              </fieldset>
+              <div class="q" id="q-nome">
+                <label for="nome">Nome completo</label>
+                <input class="input" id="nome" name="nome" type="text" autocomplete="name" maxlength="120">
+                <p class="err" role="alert">Informe seu nome completo.</p>
+              </div>
+              <div class="row2">
+                <div class="q" id="q-cpf">
+                  <label for="cpf">CPF</label>
+                  <input class="input" id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14">
+                  <p class="err" role="alert">Confira o CPF.</p>
+                </div>
+                <div class="q" id="q-telefone">
+                  <label for="telefone">Telefone (WhatsApp)</label>
+                  <input class="input" id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(85) 90000-0000" maxlength="15">
+                  <p class="err" role="alert">Informe um telefone com DDD.</p>
+                </div>
+              </div>
+              <div class="q" id="q-email">
+                <label for="email">E-mail</label>
+                <input class="input" id="email" name="email" type="email" autocomplete="email" maxlength="160" placeholder="nome@email.com">
+                <p class="err" role="alert">Confira o e-mail.</p>
+              </div>
+              <div class="q" id="q-consent">
+                <label class="consent"><input type="checkbox" id="consent" name="consentimento"> <span>Autorizo a Universidade Christus a usar estes dados para falar comigo sobre o processo seletivo do PPGD, conforme a <a href="https://www.unichristus.edu.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+                <p class="err" role="alert">Para a pré-inscrição, precisamos da sua autorização.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label>Não preencha <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+          <button class="btn submit" type="submit" id="submit">Enviar respostas</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="done" tabindex="-1" id="done">
+          <div class="check" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#7a5f27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Obrigado pela contribuição.</h3>
+          <p>Suas respostas seguem para a comissão que vai montar a Agenda de Pesquisa.</p>
+          <p class="opted">A equipe do PPGD vai falar com você por e-mail ou WhatsApp quando o edital for publicado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap logos">
+    <img class="uc" src="assets/universidade-christus-azul.png" alt="Universidade Christus" width="762" height="200" loading="lazy">
+    <img class="tjce" src="assets/tjce.png" alt="Tribunal de Justiça do Estado do Ceará (TJCE)" width="301" height="98" loading="lazy">
+    <img class="esmec" src="assets/esmec.png" alt="Escola Superior da Magistratura do Estado do Ceará (ESMEC)" width="614" height="220" loading="lazy">
+  </div>
+  <div class="bottom">
+    <div class="wrap">
+      <span>PPGD · Universidade Christus</span>
+      <nav aria-label="Contato">
+        <a href="https://wa.me/5585991851298" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/ppgdunichristus" target="_blank" rel="noopener">@ppgdunichristus</a>
+        <a href="https://www.unichristus.edu.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Para onde as respostas vão (Make, Apps Script ou Gravity Forms). Vazio = modo de teste: mostra o JSON no console.
+  const ENDPOINT = '';
+
+  const form = document.getElementById('form');
+  const card = document.getElementById('card');
+  const optin = document.getElementById('optin');
+  const optinBox = document.getElementById('optinBox');
+  const temas = [...form.querySelectorAll('input[name="temas"]')];
+  const temaOutro = document.getElementById('temaOutro');
+  const outroWrap = document.getElementById('outroWrap');
+  const cpf = document.getElementById('cpf');
+  const tel = document.getElementById('telefone');
+  const MAX_TEMAS = 3;
+
+  optinBox.addEventListener('change', () => {
+    optin.classList.toggle('on', optinBox.checked);
+    optinBox.setAttribute('aria-expanded', String(optinBox.checked));
+    if (!optinBox.checked) optin.querySelectorAll('.q').forEach(q => q.classList.remove('invalid'));
+  });
+  // Botões "Responder e me pré-inscrever" já deixam a caixa de pré-inscrição marcada.
+  document.querySelectorAll('[data-optin]').forEach(a => a.addEventListener('click', () => {
+    if (!optinBox.checked) { optinBox.checked = true; optinBox.dispatchEvent(new Event('change')); }
+  }));
+
+  temas.forEach(t => t.addEventListener('change', () => {
+    const n = temas.filter(x => x.checked).length;
+    temas.forEach(x => { if (!x.checked) x.disabled = n >= MAX_TEMAS; });
+    outroWrap.classList.toggle('on', temaOutro.checked);
+    if (n) document.getElementById('q-temas').classList.remove('invalid');
+  }));
+
+  const digits = v => v.replace(/\D/g, '');
+  cpf.addEventListener('input', () => {
+    const d = digits(cpf.value).slice(0, 11);
+    cpf.value = d.replace(/^(\d{3})(\d)/, '$1.$2').replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3').replace(/\.(\d{3})(\d{1,2})$/, '.$1-$2');
+  });
+  tel.addEventListener('input', () => {
+    const d = digits(tel.value).slice(0, 11);
+    if (d.length <= 2) tel.value = d ? '(' + d : '';
+    else if (d.length <= 6) tel.value = `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    else if (d.length <= 10) tel.value = `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    else tel.value = `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+  });
+
+  function cpfValido(v) {
+    const d = digits(v);
+    if (d.length !== 11 || /^(\d)\1{10}$/.test(d)) return false;
+    for (const len of [9, 10]) {
+      let s = 0;
+      for (let i = 0; i < len; i++) s += +d[i] * (len + 1 - i);
+      if ((s * 10) % 11 % 10 !== +d[len]) return false;
+    }
+    return true;
+  }
+
+  form.addEventListener('input', e => { const q = e.target.closest('.q'); if (q) q.classList.remove('invalid'); });
+  form.addEventListener('change', e => { const q = e.target.closest('.q'); if (q) q.classList.remove('invalid'); });
+
+  function validar() {
+    const erros = [];
+    const marca = (id, ok) => { document.getElementById(id).classList.toggle('invalid', !ok); if (!ok) erros.push(id); };
+    marca('q-vinculo', !!form.vinculo.value);
+    marca('q-atuacao', !!form.atuacao.value);
+    const temasMarcados = temas.filter(t => t.checked);
+    marca('q-temas', temasMarcados.length > 0 && (!temaOutro.checked || form.outroTexto.value.trim().length > 1));
+    if (optinBox.checked) {
+      marca('q-interesse', !!form.interesse.value);
+      marca('q-nome', form.nome.value.trim().split(/\s+/).length >= 2);
+      marca('q-cpf', cpfValido(cpf.value));
+      marca('q-telefone', [10, 11].includes(digits(tel.value).length));
+      marca('q-email', form.email.value.trim() !== '' && form.email.checkValidity());
+      marca('q-consent', form.consentimento.checked);
+    }
+    return erros;
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('formMsg');
+    msg.textContent = '';
+    if (form.website.value) return;
+    const erros = validar();
+    if (erros.length) {
+      const alvo = document.getElementById(erros[0]);
+      alvo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const campo = alvo.querySelector('input, select, textarea');
+      if (campo) campo.focus({ preventScroll: true });
+      msg.textContent = 'Confira os campos destacados.';
+      return;
+    }
+    const params = new URLSearchParams(location.search);
+    const payload = {
+      enviado_em: new Date().toISOString(),
+      origem: location.href.split('#')[0],
+      utm: Object.fromEntries([...params].filter(([k]) => k.startsWith('utm_'))),
+      consulta: {
+        vinculo: form.vinculo.value,
+        atuacao: form.atuacao.value,
+        temas: temas.filter(t => t.checked).map(t => t.value),
+        tema_outro: temaOutro.checked ? form.outroTexto.value.trim() : '',
+        problema: form.problema.value.trim()
+      },
+      preinscricao: optinBox.checked ? {
+        interesse: form.interesse.value,
+        nome: form.nome.value.trim(),
+        cpf: digits(cpf.value),
+        telefone: digits(tel.value),
+        email: form.email.value.trim(),
+        consentimento: true
+      } : null
+    };
+    const btn = document.getElementById('submit');
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    try {
+      if (ENDPOINT) {
+        const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        if (!r.ok) throw new Error(r.status);
+      } else {
+        console.info('[modo de teste] payload da consulta:', payload);
+      }
+      card.classList.add('sent');
+      card.classList.toggle('with-optin', !!payload.preinscricao);
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('done').focus({ preventScroll: true });
+    } catch (err) {
+      msg.textContent = 'Não foi possível enviar agora. Tente de novo em instantes.';
+      btn.disabled = false; btn.textContent = 'Enviar respostas';
+    }
+  });
+</script>
+</body>
+</html>
