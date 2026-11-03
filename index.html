@@ -155,6 +155,10 @@
   .line h3 { margin-top: 10px; font-size: 22px; color: var(--white); }
   .line p { margin-top: 10px; font-size: 15px; color: var(--on-dark-2); }
   @media (max-width: 760px) { .lines { grid-template-columns: 1fr; } }
+  .stats-note { margin-top: 16px; font-size: 15px; color: var(--on-dark-2); }
+  .projects { list-style: none; margin: 18px 0 0; padding: 16px 0 0; border-top: 1px solid var(--slate-line); display: grid; gap: 12px; }
+  .projects li { font-size: 14px; line-height: 1.5; color: var(--on-dark-2); }
+  .projects b { display: block; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
   .more { margin-top: 36px; }
 
   /* formulário */
@@ -343,17 +347,26 @@
         <div><b>13</b><span>docentes doutores</span></div>
         <div><b>2</b><span>linhas de pesquisa</span></div>
       </div>
+      <p class="stats-note">Possibilidade de turma com horários adaptados durante os finais de semana e seminários específicos sobre o tema selecionado em havendo mais de 11 mestrandos conveniados.</p>
 
       <div class="lines">
         <article class="line">
           <p class="eyebrow">Linha 1</p>
           <h3>Direito Processual e Acesso à Justiça</h3>
           <p>Jurisdição constitucional, precedentes, processo democrático e meios adequados de tratamento dos conflitos.</p>
+          <ul class="projects">
+            <li><b>Projeto de Pesquisa 1</b>Jurisdição constitucional e precedentes na conformação do Estado de Direito brasileiro e trato da litigiosidade.</li>
+            <li><b>Projeto de Pesquisa 2</b>Processo democrático, Judiciário e meios de tratamento adequado de conflitos.</li>
+          </ul>
         </article>
         <article class="line">
           <p class="eyebrow">Linha 2</p>
           <h3>Direito ao Desenvolvimento (Relações Públicas e Privadas)</h3>
           <p>Desenvolvimento social e socioeconômico e a realização dos direitos fundamentais nas relações públicas e privadas.</p>
+          <ul class="projects">
+            <li><b>Projeto de Pesquisa 3</b>Desenvolvimento social no contexto brasileiro.</li>
+            <li><b>Projeto de Pesquisa 4</b>Desenvolvimento socioeconômico e realização dos direitos fundamentais nas relações privadas.</li>
+          </ul>
         </article>
       </div>
 
@@ -457,7 +470,7 @@
                 <p class="err" role="alert">Confira o e-mail.</p>
               </div>
               <div class="q" id="q-consent">
-                <label class="consent"><input type="checkbox" id="consent" name="consentimento"> <span>Autorizo a Universidade Christus a usar estes dados para falar comigo sobre o processo seletivo do PPGD, conforme a <a href="https://www.unichristus.edu.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+                <label class="consent"><input type="checkbox" id="consent" name="consentimento"> <span>Autorizo a Universidade Christus a usar estes dados para falar comigo sobre o processo seletivo do PPGD, conforme a <a href="https://www.unichristus.edu.br/pptd/" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
                 <p class="err" role="alert">Para a pré-inscrição, precisamos da sua autorização.</p>
               </div>
             </div>
